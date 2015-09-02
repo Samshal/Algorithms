@@ -35,7 +35,7 @@ class insertion_sort
 
 
 	/* ---- RETURNS THE SORTED ARRAY ---- */
-	public void getInput()
+	public void getOutput()
 	{
 		for (int i:this.input)
 		{
@@ -68,7 +68,7 @@ class insertion_sort
 		int[] input = isObj.accept();
 		isObj.setInput(input);
 		isObj.sort();
-		System.out.print("\n\nResult: "); isObj.getInput();
+		System.out.print("\n\nResult: "); isObj.getOutput();
 	}
 
 }
