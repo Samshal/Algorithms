@@ -14,22 +14,23 @@ class insertion_sort
 		for (int i = 0; i < lengthOfInput; i++)
 		{
 			int key;
-			while(i >= 0 && (i < lengthOfInput))
+			try
 			{
-				if ((lengthOfInput > i + 1) && (input[i] > input[i + 1]))
+				while((i >= 0) && (this.input[i] > this.input[i+1]))
 				{
-					key = input[i];
-					input[i] = input[i+1];
-					input[i+1] = key;
-					i--;
+					key = this.input[i];
+					this.input[i] = this.input[i+1];
+					this.input[i+1] = key;
+					i -= 1;
 				}
 			}
+			catch(Exception e) { }
 		}
 	}
 
 	public void getInput()
 	{
-		for (int i:input)
+		for (int i:this.input)
 		{
 			System.out.println(i);
 		}
@@ -38,9 +39,19 @@ class insertion_sort
 	public static void main(String[] args)
 	{
 		insertion_sort isObj = new insertion_sort();
-		isObj.setInput(int[] {12, 42, 56, 11, 245, 1});
+		int[] input = {12, 42, 56, 11, 245, 1};
+		isObj.setInput(input);
 		isObj.sort();
 		isObj.getInput();
 	}
 
 }
+
+
+/*
+{1, 3, 4, 5, 6}
+
+input[0] > input[1] && 
+
+
+*/
